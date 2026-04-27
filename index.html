@@ -74,7 +74,7 @@ table{width:100%;border-collapse:collapse;font-size:13px;min-width:400px;}
 th{color:var(--muted);font-weight:500;padding:7px 14px;text-align:right;border-bottom:1px solid var(--border);white-space:nowrap;}
 th:first-child{text-align:left;}
 td{padding:8px 14px;text-align:right;border-bottom:1px solid rgba(255,255,255,0.04);}
-td:first-child{text-align:left;font-weight:600;}
+td:first-child{text-align:left;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .zero{color:var(--border);}
 @media(max-width:900px){.sg{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:600px){.top{grid-template-columns:1fr 1fr;}.sg{grid-template-columns:1fr;}.wrap{padding:14px;}}
@@ -223,7 +223,12 @@ td:first-child{text-align:left;font-weight:600;}
 <!-- 신규/리피터 표 -->
 <div class="tc">
   <h3>月別・スタッフ別 新規 / リピーター数</h3>
-  <table>
+  <table style="table-layout:fixed">
+    <colgroup>
+      <col style="width:130px">
+      <col style="width:100px;border-right:1px solid var(--border)">
+      <col style="width:70px"><col style="width:70px"><col style="width:70px"><col style="width:70px"><col style="width:70px"><col style="width:70px"><col style="width:70px"><col style="width:70px"><col style="width:70px"><col style="width:70px"><col style="width:70px"><col style="width:70px">
+    </colgroup>
     <thead>
       <tr>
         <th>スタッフ</th>
@@ -255,7 +260,12 @@ td:first-child{text-align:left;font-weight:600;}
 <!-- オフのみ / お直し -->
 <div class="tc">
   <h3>オフのみ / お直し 月別カウント</h3>
-  <table>
+  <table style="table-layout:fixed">
+    <colgroup>
+      <col style="width:130px">
+      <col style="width:100px">
+      <col style="width:70px"><col style="width:70px"><col style="width:70px"><col style="width:70px"><col style="width:70px"><col style="width:70px"><col style="width:70px"><col style="width:70px"><col style="width:70px"><col style="width:70px"><col style="width:70px"><col style="width:70px">
+    </colgroup>
     <thead>
       <tr><th>スタッフ</th><th style="border-right:1px solid var(--border)">累計</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>
     </thead>
